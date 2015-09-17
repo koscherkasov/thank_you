@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.model">
+    <class name="Like" table="liketbl">
+        <id name="id" column="id" unsaved-value="null">
+            <generator class="native"/>
+        </id>
+        <many-to-one name="sender" column="sender_id" class="User" lazy="false" fetch="join" cascade="all"/>
+        <many-to-one name="reciever" column="reciever_id" class="User" lazy="false" fetch="join" cascade="all"/>
+
+        <property name="date" type="date" column="date"/>
+        <property name="comment" type="string" column="comment" length="255"/>
+        <property name="typeBage"/>
+        <property name="isShow"/>
+
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,263 @@
+
+div#page-wrap {
+    font-family: Geneva;
+    position: center;
+    margin: 1em;
+    margin-top: 0em;
+    padding-top: 0em;
+
+    min-height: 700px;
+    height: 100%;
+    color: #1A1A1A;
+}
+
+div#head {
+    text-align: center;
+    padding-top: 0.6em;
+    padding-bottom: 0em;
+    /* background: #B0E0E6;*/
+    background: #D0EFEF;
+}
+
+div#head a {
+    text-decoration: none;
+    color: #1A1A1A;
+}
+
+div#head a:hover {
+    color: #1A3399;
+}
+
+div#head h1 {
+    display: block;
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 0em;
+    margin-top: 0em;
+}
+
+div#information {
+    background: #D0EFEF;
+    padding: 0.8em;
+    padding-top: 0em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid black;
+}
+
+div#information a {
+    font-size: 1em;
+    text-decoration: none;
+    color: #1A1A1A;
+}
+
+div#information a:hover {
+    color: #1A3399;
+}
+
+div#profile {
+    float: left;
+}
+
+div#users {
+    text-align: right;
+}
+
+div#sendLike {
+    text-align: center;
+    margin: 1.3em;
+}
+
+div#sendLike a {
+    font-size: 1.2em;
+    color: #1A1A1A;
+    text-decoration: none;
+    padding: 0.4em;
+
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-radius: 0px;
+
+}
+
+div#sendLike a:hover {
+    color: #1A3399;
+}
+
+/*NEXT BASE*/
+
+div#base {
+    margin-left: 15%;
+    width: 70%;
+    height: auto;
+}
+
+div#notif {
+    text-align: right;
+    color: #1A3399;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+div#nameAndInfo {
+    min-height: 4em;
+}
+
+div#fullName {
+    float: left;
+    width: 25%;
+    min-width: 110px;
+    border-right: 1px solid #2F4F4F;
+    margin-right: 2em;
+    height: 4em;
+}
+
+div#fullInfo {
+    font-size: 1em;
+    color: #2F4F4F;
+    min-width: 310px;
+    float: left;
+}
+
+div#comments {
+    min-height: 200px;
+}
+
+div#selectTime {
+    margin-top: 2em;
+    text-align: right;
+    width: 100%;
+}
+
+div.comment {
+    margin-right: 10em;
+    float: left;
+    margin-top: 2em;
+    border-bottom: 1px solid grey;
+    min-width: 100%;
+}
+
+div.new {
+    background: #D0EFEF;
+    padding-left: 6em;
+    margin-bottom: 2px;
+}
+
+div.picCom {
+    float: left;
+    min-width: inherit;
+}
+
+div.pic {
+    float: left;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}
+
+div.com {
+    width: 100%;
+    min-width: 200px;
+    padding-bottom: 1em;
+}
+
+div.del {
+    margin: 10px;
+    margin-top: 0px;
+    margin-right: 0px;
+    float: right;
+}
+
+div.commiter a {
+    font-size: 1.1em;
+    color: #1A1A1A;
+    text-decoration: none;
+    margin-left: 2.4em;
+}
+
+div.commiter a:hover {
+    color: #1A3399;
+}
+
+div.text {
+    color: #1F1F1F;
+    padding: 0.5em;
+}
+
+div.time {
+    font-size: 0.9em;
+    padding: 1em;
+    text-align: right;
+    color: #1F1F1F;
+}
+
+/*for Like page*/
+div#likePage {
+    text-align: center;
+}
+
+div#likePage table {
+    min-width: 100%;
+    padding: 1em;
+}
+
+select.sendSelect {
+    text-align: left;
+}
+
+textarea {
+    resize: none;
+}
+
+div#likePage img {
+    border: 4px double white;
+}
+
+div#likePage input:checked + img {
+    border: 4px double #1A3399;
+}
+
+input.sendButton {
+    font-size: 1.25em;
+    color: #1A1A1A;
+    text-decoration: none;
+    padding: 0.6em;
+}
+
+/*For list users*/
+#listUser {
+    margin-left: 30%;
+    width: 40%;
+}
+
+#listUser h2 {
+    font-size: 1.6em;
+    font-weight: 500;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+#listUser ul {
+    list-style: none;
+}
+
+#listUser ul li {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #CCCCCC;
+}
+
+#listUser ul li a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    line-height: 30px;
+    padding-left: 3em;
+}
+
+#listUser ul li a:hover {
+    color: #1A3399;
+}
+
+
+
+

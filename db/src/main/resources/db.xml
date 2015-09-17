@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+    <bean id="daoUser" class="com.db.DaoUser">
+        <property name="sessionFactory" ref="sessionfactory"/>
+    </bean>
+    <bean id="daoLike" class="com.db.DaoLike">
+        <property name="sessionFactory" ref="sessionfactory"/>
+        <property name="daoUser" ref="daoUser"/>
+    </bean>
+    <bean id="sessionfactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mappingResources">
+            <list>
+                <value>Department.hbm.xml</value>
+                <value>Like.hbm.xml</value>
+                <value>User.hbm.xml</value>
+                <value>Role.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.connection.pool_size">1</prop>
+                <prop key="hibernate.cashe.provider_class">org.hibernate.cache.internal.NoCacheProvider</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/thankyou_db"/>
+        <property name="username" value="root"/>
+        <property name="password" value="toor"/>
+    </bean>
+
+    <!-- for transaction -->
+    <tx:annotation-driven transaction-manager="txManager"/>
+    <bean id="txManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionfactory"/>
+    </bean>
+
+    <bean id="myUserDetailsService" class="com.db.MyUserDetailsService">
+        <property name="userDao" ref="daoUser"/>
+    </bean>
+
+</beans>
